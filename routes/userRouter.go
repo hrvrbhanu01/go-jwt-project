@@ -12,3 +12,4 @@ func UserRoutes(incomingRoutes *gin.Engine) {
 	incomingRoutes.GET("/users", contoller.GetUsers())
 	incomingRoutes.GET("users/:user_id", controller.GetUser())
 }
+go mod init your-module-name
