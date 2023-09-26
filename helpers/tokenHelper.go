@@ -27,7 +27,7 @@ var userCollection *mongo.Collection = database.OpenCollection(database.Client, 
 
 var SECRET_KEY string = os.Getenv("SECRET_KEY")
 
-func GenerateAllTokens(email string, firstName string, userType string, uid string) (signedTokens string, signedRefreshToken string) {
+func GenerateAllTokens(email string, firstName string, lastName string, userType string, uid string) (signedTokens string, signedRefreshToken string) {
 	claims := &SignedDetails{
 		Email:      email,
 		First_name: firstName,
